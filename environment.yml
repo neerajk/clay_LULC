@@ -1,0 +1,44 @@
+name: lulc_clay
+channels:
+  - conda-forge
+  - pytorch
+  - nodefaults
+dependencies:
+  - python=3.10
+  # --- Core Geospatial Stack ---
+  - gdal>=3.6.0        # For Task 1: Clipping and Reprojection
+  - pystac-client      # For Task 2: Searching Planetary Computer
+  - planetary-computer # For Task 2: Signing STAC items
+  - odc-stac           # For Task 2: Parallel loading & resampling
+  - rioxarray          # For Task 2: Raster alignment & masking
+  - geopandas          # For Task 1 & 2: Shapefile handling
+  - rasterio           # For Task 1: Low-level raster I/O
+  
+  # --- Parallel & Task Management ---
+  - dask               # For the "Task Manager" style processing
+  - distributed        # For Dask LocalCluster
+  - tqdm               # For visual progress bars
+  - python-dotenv      # For loading .env variables
+  
+  # --- Machine Learning Stack ---
+  - pytorch            # CPU/GPU support
+  - torchvision
+  - pytorch-lightning  # CLAY uses Lightning for modules
+  - numpy<2.0.0        # Avoid compatibility issues with older libs
+  - pandas
+  
+  # --- Visualization ---
+  - matplotlib
+  - ipykernel          # For using this env in VS Code Notebooks
+  
+  # --- Pip-only installs (Foundation Models) ---
+  - pip
+  - pip:
+    - clay-foundation  # The CLAY model logic
+    - segment-geospatial # Optional: If you decide to use SAM later
+
+
+    #########
+    ####
+    ## This hooks mamba into your current session
+########.      eval "$(mamba shell hook --shell zsh)"

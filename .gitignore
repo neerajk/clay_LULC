@@ -1,0 +1,12 @@
+cat <<EOF > .gitignore
+.env
+data/
+models/
+raw_data/
+src/WIP/
+__pycache__/
+*.tif
+*.npz
+*.ckpt
+.DS_Store
+EOF
