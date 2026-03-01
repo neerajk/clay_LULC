@@ -2,6 +2,7 @@ name: lul_clay
 channels:
   - conda-forge
   - pytorch
+  # Note: The "defaults" channel is intentionally omitted to avoid conflicts with conda-forge packages
 dependencies:
   - _openmp_mutex=4.5=7_kmp_llvm
   - affine=2.4.0=pyhd8ed1ab_1
