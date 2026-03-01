@@ -35,3 +35,11 @@ LULC_CLASS_MAP: Dict[int, Tuple[str, str]] = {
 
 LULC_VALID_CLASS_IDS = tuple(sorted(LULC_CLASS_MAP.keys()))
 
+
+# Standardized NRSC-style colors for the 20 classes
+class_colors = [
+    "#000000", "#E60000", "#FFFF00", "#DAA520", "#228B22", 
+    "#006400", "#00FF00", "#32CD32", "#6B8E23", "#A52A2A", 
+    "#D2B48C", "#F4A460", "#8B4513", "#000080", "#4169E1", 
+    "#00BFFF", "#FFFFFF", "#D3D3D3", "#808000", "#90EE90"
+]
