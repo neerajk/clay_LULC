@@ -127,7 +127,7 @@ landsat-c2l1:
       nir08: 0.86
       swir16: 1.6
       swir22: 2.2
-landsat-c2l2-sr:
+landsat-c2-l2:
   band_order:
     - red
     - green

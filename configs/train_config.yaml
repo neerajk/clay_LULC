@@ -1,0 +1,20 @@
+# ==========================================
+# TRAINING CONFIGURATION
+# ==========================================
+
+paths:
+  # Paths are relative to the 'scripts/' directory where you run the code
+  embed_dir: "../data/embeddings/"
+  checkpoint_dir: "../models/checkpoints/"
+
+training:
+  num_classes: 20
+  batch_size: 32
+  max_epochs: 50
+  learning_rate: 0.001
+  ignore_index: 0
+  seed: 42 # Ensures reproducibility across Train/Val splits
+
+dataloader:
+  num_workers: 4
+  pin_memory: false
