@@ -10,9 +10,27 @@ paths:
 training:
   num_classes: 20
   batch_size: 32
-  max_epochs: 50
-  learning_rate: 0.001
+  max_epochs: 80
+  learning_rate: 0.0002
   ignore_index: 0
+  train_split_ratio: 0.8
+  min_valid_fraction: 0.60
+  class_weight_power: 0.5
+  class_weight_clip: 6.0
+  dice_weight: 0.25
+  patch_size: 16
+  full_loss_weight: 0.6
+  coarse_loss_weight: 0.4
+  monitor_metric: "val_mIoU_patch"
+  weight_decay: 0.0001
+  lr_factor: 0.5
+  lr_patience: 4
+  min_lr: 0.000001
+  gradient_clip_val: 1.0
+  early_stopping_patience: 20
+  early_stopping_min_delta: 0.0005
+  save_top_k: 3
+  log_every_n_steps: 10
   seed: 42 # Ensures reproducibility across Train/Val splits
 
 dataloader:
