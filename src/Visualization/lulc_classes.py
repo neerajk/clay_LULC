@@ -10,27 +10,28 @@ from __future__ import annotations
 from typing import Dict, Tuple
 
 # Pixel value -> (Level-I class, Level-II class)
+# Source: ORNL DAAC DS-1336 (Decadal LULC India) Table 2 pixel-value legend.
 LULC_CLASS_MAP: Dict[int, Tuple[str, str]] = {
     0: ("No Data", "No Data"),
-    1: ("Built-up Land", "Built-up Land"),
+    1: ("Forest", "Deciduous Broadleaf Forest"),
     2: ("Agricultural Land", "Crop land"),
-    3: ("Agricultural Land", "Fallow land"),
-    4: ("Forest", "Deciduous Broadleaf Forest"),
-    5: ("Forest", "Deciduous Needleleaf Forest"),
-    6: ("Forest", "Evergreen Broadleaf Forest"),
-    7: ("Forest", "Evergreen Needleleaf Forest"),
-    8: ("Forest", "Mixed Forest"),
-    9: ("Barren Land", "Barren rocky"),
-    10: ("Barren Land", "Scrub land"),
-    11: ("Barren Land", "Sandy area"),
-    12: ("Barren Land", "Barren/unculturable/wasteland"),
-    13: ("Water", "Permanent wetland"),
-    14: ("Water", "Seasonal wetland"),
-    15: ("Water", "Water bodies"),
-    16: ("Snow and Ice", "Snow and Ice"),
-    17: ("Open Area", "Open Area"),
-    18: ("Plantation", "Plantation"),
-    19: ("Grassland", "Grassland"),
+    3: ("Built-up Land", "Built-up Land"),
+    4: ("Forest", "Mixed Forest"),
+    5: ("Shrubland", "Shrubland"),
+    6: ("Barren Land", "Barren Land"),
+    7: ("Agricultural Land", "Fallow land"),
+    8: ("Barren Land", "Wasteland"),
+    9: ("Water", "Water bodies"),
+    10: ("Plantation", "Plantation"),
+    11: ("Water", "Aquaculture"),
+    12: ("Forest", "Mangrove Forest"),
+    13: ("Barren Land", "Salt Pan"),
+    14: ("Grassland", "Grassland"),
+    15: ("Forest", "Evergreen Broadleaf Forest"),
+    16: ("Forest", "Deciduous Needleleaf Forest"),
+    17: ("Water", "Permanent wetland"),
+    18: ("Snow and Ice", "Snow and Ice"),
+    19: ("Forest", "Evergreen Needleleaf Forest"),
 }
 
 LULC_VALID_CLASS_IDS = tuple(sorted(LULC_CLASS_MAP.keys()))
