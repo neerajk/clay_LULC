@@ -37,10 +37,29 @@ LULC_CLASS_MAP: Dict[int, Tuple[str, str]] = {
 LULC_VALID_CLASS_IDS = tuple(sorted(LULC_CLASS_MAP.keys()))
 
 
-# Standardized NRSC-style colors for the 20 classes
+# Paper-aligned generalized palette (Roy et al., Remote Sensing 2015, Table 3 classes).
+# The paper defines class taxonomy but does not provide a fixed HEX legend table;
+# colors below follow standard thematic conventions by Level-I/Level-II class meaning.
+# Index = class ID (0..19).
 class_colors = [
-    "#000000", "#E60000", "#FFFF00", "#DAA520", "#228B22", 
-    "#006400", "#00FF00", "#32CD32", "#6B8E23", "#A52A2A", 
-    "#D2B48C", "#F4A460", "#8B4513", "#000080", "#4169E1", 
-    "#00BFFF", "#FFFFFF", "#D3D3D3", "#808000", "#90EE90"
+    "#000000",  # 0  No Data
+    "#2E8B57",  # 1  Deciduous Broadleaf Forest
+    "#FFF200",  # 2  Crop land
+    "#E31A1C",  # 3  Built-up Land
+    "#4CAF50",  # 4  Mixed Forest
+    "#7CB342",  # 5  Shrubland
+    "#C2B280",  # 6  Barren Land
+    "#D4A017",  # 7  Fallow land
+    "#BCAAA4",  # 8  Wasteland
+    "#1E88E5",  # 9  Water bodies
+    "#66BB6A",  # 10 Plantation
+    "#26C6DA",  # 11 Aquaculture
+    "#00695C",  # 12 Mangrove Forest
+    "#F48FB1",  # 13 Salt Pan
+    "#8BC34A",  # 14 Grassland
+    "#1B5E20",  # 15 Evergreen Broadleaf Forest
+    "#33691E",  # 16 Deciduous Needleleaf Forest
+    "#00ACC1",  # 17 Permanent wetland
+    "#FFFFFF",  # 18 Snow and Ice
+    "#2E7D32",  # 19 Evergreen Needleleaf Forest
 ]
